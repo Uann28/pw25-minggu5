@@ -26,25 +26,25 @@ function startTimer() {
     timer = setInterval(() => {
         const notif = document.createElement("div");
         if (waktu <= 1) {
-        clearInterval(timer);
-        document.getElementById("timer").style.color = "#dc3545";
-        document.getElementById("timer").innerText = "00:00";
-        alarmSound.play();
-        notif.innerText = "🎉 Waktu fokus selesai!";
-        notif.style.background = "#ffc107";
-        notif.style.color = "#000";
-        notif.style.padding = "1rem";
-        notif.style.marginTop = "1rem";
-        notif.style.borderRadius = "10px";
-        notif.style.fontWeight = "bold";
-        notif.style.textAlign = "center";
+          clearInterval(timer);
+          document.getElementById("timer").style.color = "#dc3545";
+          document.getElementById("timer").innerText = "00:00";
+          alarmSound.play();
+          notif.innerText = "🎉 Waktu fokus selesai!";
+          notif.style.background = "#ffc107";
+          notif.style.color = "#000";
+          notif.style.padding = "1rem";
+          notif.style.marginTop = "1rem";
+          notif.style.borderRadius = "10px";
+          notif.style.fontWeight = "bold";
+          notif.style.textAlign = "center";
 
-        document.querySelector(".timer-section").appendChild(notif);
+          document.querySelector(".timer-section").appendChild(notif);
         } else {
-        waktu--;
-        const menit = Math.floor(waktu / 60);
-        const detik = waktu % 60;
-        document.getElementById("timer").innerText = `${String(menit).padStart(2, '0')}:${String(detik).padStart(2, '0')}`;
+          waktu--;
+          const menit = Math.floor(waktu / 60);
+          const detik = waktu % 60;
+          document.getElementById("timer").innerText = `${String(menit).padStart(2, '0')}:${String(detik).padStart(2, '0')}`;
         }
     }, 1000);
 }  

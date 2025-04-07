@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Focus Timer</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="task.html">Tugas Harian</a>
+    </nav>
+
+    <header>
+        <h1>Selamat Datang di Focus Timer!</h1>
+        <p id="greeting"></p>
+    </header>
+
+    <main class="timer-section">
+        <h2>Atur Waktu Fokusmu</h2>
+        <label for="waktuSelesai">Pilih Jam Selesai:</label>
+        <input type="time" id="waktuSelesai" />
+        <button onclick="startTimer()">Mulai Fokus</button>
+        <div id="timer-container">
+            <div id="timer">00:00</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Focus Timer App</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Menampilkan sapaan berdasarkan waktu
+        const greeting = document.getElementById("greeting");
+        const hour = new Date().getHours();
+        if (hour < 12) greeting.innerText = "Selamat pagi!";
+        else if (hour < 18) greeting.innerText = "Selamat siang!";
+        else greeting.innerText = "Selamat malam!";
+    </script>
+</body>
+
+<audio id="alarmSound" src="assets/alarm.m4a" preload="auto"></audio>
+
+</html>

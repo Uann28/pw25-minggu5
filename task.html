@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas Harian</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="task.html">Tugas Harian</a>
+  </nav>
+
+  <header>
+    <h1>Daftar Tugas Harian</h1>
+  </header>
+
+  <main>
+    <form id="taskForm" onsubmit="return validateForm()">
+      <input type="text" id="task" placeholder="Nama Tugas">
+      <input type="date" id="deadline">
+      <input type="time" id="time">
+      <button type="submit">Tambah Tugas</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Tugas</th>
+          <th>Deadline</th>
+        </tr>
+      </thead>
+      <tbody id="taskTableBody"></tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Focus Timer App</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
